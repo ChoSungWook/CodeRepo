@@ -27,6 +27,7 @@ ul.item-list-group
     background-color : white;
     border : 2px solid #1276F9;
     padding-left : 0px;
+    margin-top : 0px;
 }
 li.list-item
 {
@@ -37,4 +38,39 @@ li.list-item
     margin-left : 5px;
     padding-left : 0px;
     height : 30px;
+}
+div.menu-label
+{
+    width : 100px;
+    height: 30px;
+    color: #1276F9;
+    font-size: 24px;
+    background-color : white;
+    border : 1px solid #1276F9;
+    text-align : center;
+    padding-bottom : 3px;
+    margin-top : 0px;
+}
+div.selected-menu-label
+{
+    width : 100px;
+    height: 30px;
+    color: white;
+    font-size: 24px;
+    background-color : #1276F9;
+    border : 1px solid #1276F9;
+    text-align : center;
+    padding-bottom : 3px;
+    margin-top : 0px;
+}
+div.default-section
+{
+    width: 1200px;
+    height : 2000px;
+    background-color : white;
+    border : 2px solid #1276F9;
+    padding-left : 10px;
+    color: #1276F9;
+    margin-top : 0px;
+
 }

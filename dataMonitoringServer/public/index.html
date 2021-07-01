@@ -15,14 +15,25 @@
         <hr style="color: #1276F9">
 
         <input type="button" id='funcBtn' class="button-round" value="button">
-        <ul id="dataList" style="list-style:none;" class="item-list-group">
+        <div>
+        <div class="selected-menu-label" style="float:left" id="menu_liveData">livedata</div>
+        <div class="menu-label" style="float:left" id="menu_settings">settings</div>
+        </div>
+        <br><br>
+        <ul id="dataList" style="list-style:none; " class="item-list-group">
             <!--
           <li class="list-item" id="testLi"><p>test <font style="float:right">00:00:00</font></p>
               <li style="margin-left:30px" id="testDetail">detail</li>
           </li>
           -->
         </ul>
-
+        <div id="settingSec" style="display:none" class="default-section">
+            <div id='tagFunc'>
+                <p style="margin-bottom:0px">tag</p>
+                <input type="text" style="margin-top:5px" id="tagText">
+                <p style="margin-top:10px"> tag는 json data중 해당 데이터만 분리하여 표시하며 ','로 구분합니다.</p>
+            </div>
+        </div>
         <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>-->
         <script type="text/javascript" src="./app.js"></script>
     </body>

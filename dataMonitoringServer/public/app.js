@@ -59,28 +59,37 @@
         var tagdata = "tag:\r\n";
         if(auth == 0)
         {
-          var tagText = document.getElementById('tagText');//.textContent.slice(',');
+          var tagText = document.getElementById('tagText');
           tagList = tagText.value.split(',');
           var jsonProperty;
+          var tagDiv = document.createElement('div');
+          tagDiv.style.color = 'green';
+          tagDiv.style['margin-left'] = '5px';
           if(data[0]=='{' && data[data.length-1]=='}')
           {
             console.log("json data");
             data = data.slice(1,data.length-1);
             jsonProperty = data.split(',');
             var i=0,j=0;
+            datDiv.appendChild(document.createTextNode('tag:'));
+            datDiv.appendChild(document.createElement('br'));
+            datDiv.appendChild(tagDiv);
             for(i=0;i<tagList.length;++i)
             {
               var idx = jsonProperty.findIndex(data => data.includes(tagList[i]+":"));
               if(idx!=-1)
               {
+                
+                tagDiv.appendChild(document.createTextNode(jsonProperty[idx]));
+                tagDiv.appendChild(document.createElement('br'));
                 tagdata+= jsonProperty[idx]+"\r\n";
                 data = data.slice(0,idx)+data.slice(jsonProperty[idx].length+1,data.length-1);
               }
             }
 
           }
-          datDiv.appendChild(document.createTextNode(tagdata));
-          datDiv.appendChild(document.createElement('br'));
+         // datDiv.appendChild(document.createTextNode(tagdata));
+         // datDiv.appendChild(document.createElement('br'));
         }
 
         var dataText='data : '+data;

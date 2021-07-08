@@ -1,7 +1,8 @@
 //var express = require('express');
 
-var data = [[37.571335,126.828456],[37.570850,126.825557],[37.568594,126.824415],[37.567138,126.825073],[37.565967,126.827543],[37.566678,126.830788],[37.568963,126.831567],[37.569019,126.827805]]
-const selectIdx = [1,2,6];
+var data = [[37.571335,126.828456],[37.570850,126.825557],[37.568594,126.824415],[37.567138,126.825073],[37.565967,126.827543],[37.566678,126.830788],[37.568963,126.831567],[37.569019,126.827805]];
+const selectIdx = [0,3,5];
+const selectRssi = [-60,-120,-60];
 var pushList = new Array();
 
 function getTriPos(pushList)
@@ -133,7 +134,7 @@ function getDest(t_x,t_y,c_x,c_y){return Math.sqrt(Math.pow(c_x-t_x,2) + Math.po
   for(i=0;i<3;++i)
   {
     var dataObj = {
-      foundDeviceRSSI : -110,
+      foundDeviceRSSI : selectRssi[i],
       founderPhoneLatitude : data[selectIdx[i]][0],
       founderPhoneLongitude : data[selectIdx[i]][1],
     }
